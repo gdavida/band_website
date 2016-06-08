@@ -1,0 +1,22 @@
+
+<div class="gig-form">
+  <%= form_for @gig, url: {action: "create"} do |f| %>
+    <div class="input-field">
+      <%= f.label :date %>
+      <%= f.datetime_field :date, class: "datepicker", id: "date" %>
+    </div>
+    <div class="input-field">
+      <%= f.label :venue %>
+      <%= f.text_field :venue, class: "validate" %>
+    </div>
+    <div class="input-field">
+      <%= f.label :start_time %>
+      <%= f.text_field :start_time, class: "validate" %>
+    </div>
+    <div class="input-field">
+      <%= f.label :location %>
+      <%= f.text_field :location, class: "validate" %>
+    </div>
+    <%= f.submit "Create Gig" %>
+  <% end %>
+</div>
