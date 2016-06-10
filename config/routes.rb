@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/schedule', to: 'static_pages#schedule', as: 'schedule'
   get '/song_list', to: 'static_pages#song_list', as: 'song_list'
   get '/photos', to: 'static_pages#photos', as: 'photos'
+  get '/contact', to: 'static_pages#contact', as: 'contact'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
