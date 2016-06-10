@@ -9,7 +9,8 @@ class StaticPagesController < ApplicationController
   end
 
   def schedule
-    @gigs = Gig.all
+    @gigs = Gig.where("date >= ?", Date.today).order(date: :desc)
+    @past_gigs = Gig.where("date < ?", Date.today).order(date: :desc)
   end
 
   def song_list

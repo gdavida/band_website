@@ -11,8 +11,15 @@
         </ul>
       </div>
     </div>
-    <div class="col m6">
-
+    <div class="col m6 center-align">
+      <div class="schedule-list">
+        <h4>Where we've been</h4>
+        <ul>
+          <% @past_gigs.each do |gig| %>
+            <li><%= gig.date %> <b><%=gig.venue%></b> - <%=gig.location%> <%=gig.start_time%><li>
+          <% end %>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
